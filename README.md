@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start run` for a dev server and will runs  ```NODE_ENV=development node socket-io-server.js & ng serve``` which runs socket.io with angular so we can use socketio. Navigate to `http://localhost:4200/`.  The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
