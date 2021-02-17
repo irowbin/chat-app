@@ -1,0 +1,36 @@
+<div class="row mx-0 mt-5" [formGroup]="lForm">
+	<div class="card bg-light mx-auto mb-3" style="max-width: 20rem">
+		<div class="card-header">Sign in to your account</div>
+		<div class="card-body">
+			<mat-form-field class="w-100">
+				<mat-label>Username</mat-label>
+				<input
+					matInput
+					formControlName="username"
+					placeholder="Ex. example@domain.com"
+				/>
+				<mat-hint class="text-danger">
+					{{ _errors('username')['pattern'] ? 'Invalid email' :
+					_errors('username')['required'] ? 'Required' : '' }}
+				</mat-hint>
+			</mat-form-field>
+			<mat-form-field class="w-100">
+				<mat-label>Password</mat-label>
+				<input
+					type="password"
+					matInput
+					formControlName="password"
+					placeholder="Enter password"
+				/>
+				<mat-hint class="text-danger">
+					{{ _errors('password')['required'] ? 'Required' : '' }}
+				</mat-hint>
+			</mat-form-field>
+			<div class="d-flex justify-content-end">
+				<button type="button" (click)="login()" class="btn btn-primary">
+					Login
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

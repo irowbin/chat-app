@@ -1,0 +1,29 @@
+<div class="row mx-0 mt-4">
+	<div class="col-6 mx-auto h6 text-info">List of Users</div>
+</div>
+<div class="cow mx-0">
+	<div class="col-6 mx-auto">
+		<ng-template #noUsers>
+			<div class="alert alert-info">No users</div>
+		</ng-template>
+		<table
+			class="table table-bordered table-striped table-light table-hover"
+			*ngIf="users?.length > 0 else noUsers"
+		>
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Display Name</th>
+					<th scope="col">Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let u of users; let i = index">
+					<th scope="row">{{ i + 1 }}</th>
+					<td>{{u.displayName}}</td>
+					<td>{{u.username}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
